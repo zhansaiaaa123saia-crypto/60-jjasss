@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+<html lang="kk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Райхан Анамыздың 60 жас мерейтойына шақырту</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cormorant Garamond & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ivory: '#FAF8F5',
+                        cream: '#F4EFEB',
+                        champagne: '#E3D5C8',
+                        softBeige: '#D9C5B2',
+                        gold: '#C5A880',
+                        darkGold: '#A3865D',
+                        darkText: '#2C2A29',
+                        warmGray: '#7E7672'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FAF8F5;
+            color: #2C2A29;
+            overflow-x: hidden;
+        }
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #A3865D 0%, #C5A880 50%, #8C6D46 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border {
+            border-color: rgba(197, 168, 128, 0.4);
+        }
+        .gold-bg {
+            background-color: #C5A880;
+        }
+        .card-shadow {
+            box-shadow: 0 15px 40px -10px rgba(163, 134, 93, 0.12);
+        }
+        /* Floating background floral decorations */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(3deg); }
+        }
+        .floating-element {
+            animation: floatSlow 8s ease-in-out infinite;
+        }
+        .floating-element-delayed {
+            animation: floatSlow 10s ease-in-out infinite 3s;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF8F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D9C5B2;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C5A880;
+        }
+    </style>
+</head>
+<body class="bg-ivory text-darkText antialiased selection:bg-champagne selection:text-darkText">
+
+    <!-- Audio Player Element with Jazzdauren - Anashym -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://eu.hitmoz.com/get/music/20240412/Jazzdauren_-_Anashym_77721512.mp3" type="audio/mpeg">
+        Сіздің браузеріңіз аудионы қолдамайды.
+    </audio>
+
+    <!-- Floating Music Toggle Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button id="musicToggleBtn" onclick="toggleMusic()" class="flex items-center gap-2 bg-white/90 backdrop-blur-md border gold-border text-darkGold px-4 py-3 rounded-full shadow-lg hover:bg-champagne/40 transition-all duration-300 group">
+            <div class="w-8 h-8 rounded-full bg-champagne/50 flex items-center justify-center text-darkGold group-hover:scale-110 transition-transform">
+                <i id="musicIcon" class="fa-solid fa-music"></i>
+            </div>
+            <span id="musicText" class="text-xs font-semibold tracking-wider uppercase pr-1">Музыканы қосу</span>
+        </button>
+    </div>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 overflow-hidden bg-ivory">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-10 left-10 w-48 h-48 opacity-15 pointer-events-none floating-element">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100 0C100 55.2285 55.2285 100 0 100C55.2285 100 100 144.772 100 200C100 144.772 144.772 100 200 100C144.772 100 100 55.2285 100 0Z" fill="#C5A880"/>
+            </svg>
+        </div>
+        <div class="absolute bottom-10 right-10 w-64 h-64 opacity-15 pointer-events-none floating-element-delayed">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" stroke="#C5A880" stroke-width="2" stroke-dasharray="10 5"/>
+                <path d="M100 20C120 60 140 80 180 100C140 120 120 140 100 180C80 140 60 120 20 100C60 80 80 60 100 20Z" fill="#C5A880" fill-opacity="0.3"/>
+            </svg>
+        </div>
+
+        <div class="max-w-4xl mx-auto z-10 space-y-6">
+            <!-- Top Subtitle -->
+            <div class="inline-block animate-[fadeIn_1s_ease-out]">
+                <span class="text-xs md:text-sm tracking-[0.3em] uppercase font-semibold text-darkGold px-6 py-2 rounded-full bg-cream/80 border gold-border">
+                    Мерей тойға шақыру
+                </span>
+            </div>
+
+            <!-- Main Title -->
+            <div class="space-y-2 mt-4">
+                <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-darkText tracking-wide leading-tight">
+                    Райхан Анамыздың
+                </h1>
+                <div class="py-2">
+                    <span class="font-serif italic text-5xl sm:text-7xl md:text-8xl font-bold gold-gradient-text tracking-wider">
+                        60 жас
+                    </span>
+                </div>
+                <h2 class="font-serif text-3xl sm:text-5xl md:text-6xl font-normal text-darkText tracking-widest uppercase">
+                    мерей тойы
+                </h2>
+            </div>
+
+            <!-- Decorative Line -->
+            <div class="flex items-center justify-center gap-4 py-4">
+                <div class="h-[1px] w-16 md:w-24 bg-gold opacity-60"></div>
+                <div class="w-2 h-2 rounded-full bg-gold"></div>
+                <div class="h-[1px] w-16 md:w-24 bg-gold opacity-60"></div>
+            </div>
+
+            <!-- Date & Time -->
+            <div class="pt-2">
+                <p class="text-base sm:text-lg md:text-xl font-medium tracking-[0.2em] text-warmGray">
+                    07.10.2026 <span class="text-gold mx-2">|</span> 18:00
+                </p>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <div class="pt-12 animate-bounce">
+                <a href="#welcome" class="inline-flex flex-col items-center text-warmGray hover:text-darkGold transition-colors">
+                    <span class="text-xs uppercase tracking-widest mb-2">Әрі қарай</span>
+                    <i class="fa-solid fa-chevron-down text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. WELCOME INVITATION SECTION -->
+    <section id="welcome" class="py-24 px-4 bg-white relative">
+        <div class="max-w-3xl mx-auto text-center space-y-8 bg-ivory/60 border gold-border p-8 sm:p-12 md:p-16 rounded-3xl card-shadow relative overflow-hidden">
+            <!-- Corner subtle floral ornamentation -->
+            <div class="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-champagne/30 to-transparent rounded-br-full pointer-events-none"></div>
+            <div class="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-champagne/30 to-transparent rounded-tl-full pointer-events-none"></div>
+
+            <div class="space-y-4">
+                <span class="text-xs tracking-[0.25em] uppercase text-darkGold font-semibold">Құрметті қонақтар</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-darkText">
+                    Ардақты ағайын, қадірлі қонақтар!
+                </h2>
+            </div>
+
+            <div class="h-[1px] w-24 bg-gold/40 mx-auto"></div>
+
+            <div class="space-y-6 text-base sm:text-lg md:text-xl text-warmGray leading-relaxed font-light">
+                <p>
+                    Сіздерді аяулы <strong class="font-medium text-darkText">Райхан Анамыздың</strong> 60 жас мерей тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шын жүректен шақырамыз!
+                </p>
+                <p>
+                    Сіздердің ақ тілектеріңіз бен ізгі ниеттеріңіз бұл ерекше күннің қуанышын еселей түседі.
+                </p>
+            </div>
+
+            <div class="pt-6">
+                <p class="font-serif italic text-xl sm:text-2xl text-darkGold font-medium">
+                    Той иелері — Балалары
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. DATE & TIME SECTION -->
+    <section class="py-20 px-4 bg-ivory">
+        <div class="max-w-4xl mx-auto text-center space-y-12">
+            <div class="space-y-3">
+                <span class="text-xs tracking-[0.3em] uppercase text-darkGold font-semibold">Уақыты мен мезгілі</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-darkText">
+                    Мерейтой күні
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                <!-- Date Card -->
+                <div class="bg-cream/70 border gold-border p-8 rounded-2xl card-shadow flex flex-col items-center justify-center space-y-3 hover:scale-[1.02] transition-transform duration-300">
+                    <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-darkGold text-2xl shadow-sm">
+                        <i class="fa-regular fa-calendar-days"></i>
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-warmGray font-medium">Күні</span>
+                    <h3 class="font-serif text-3xl sm:text-4xl font-semibold text-darkText">
+                        07 қазан 2026
+                    </h3>
+                    <p class="text-sm text-warmGray">сейсенбі</p>
+                </div>
+
+                <!-- Time Card -->
+                <div class="bg-cream/70 border gold-border p-8 rounded-2xl card-shadow flex flex-col items-center justify-center space-y-3 hover:scale-[1.02] transition-transform duration-300">
+                    <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-darkGold text-2xl shadow-sm">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-warmGray font-medium">Басталу уақыты</span>
+                    <h3 class="font-serif text-3xl sm:text-4xl font-semibold text-darkText">
+                        18:00
+                    </h3>
+                    <p class="text-sm text-warmGray">кешкі ас уақыты</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. VENUE & LOCATION SECTION -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto text-center space-y-10">
+            <div class="space-y-3">
+                <span class="text-xs tracking-[0.3em] uppercase text-darkGold font-semibold">Мейрамхана</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-darkText">
+                    Той өтетін мекен
+                </h2>
+            </div>
+
+            <div class="bg-ivory border gold-border p-8 sm:p-12 rounded-3xl card-shadow max-w-2xl mx-auto space-y-6">
+                <div class="w-16 h-16 rounded-full bg-champagne/40 mx-auto flex items-center justify-center text-darkGold text-3xl">
+                    <i class="fa-solid fa-hotel"></i>
+                </div>
+
+                <div class="space-y-2">
+                    <h3 class="font-serif text-4xl sm:text-5xl font-bold text-darkText gold-gradient-text">
+                        Golden Palace
+                    </h3>
+                    <p class="text-lg sm:text-xl text-warmGray font-light pt-2">
+                        Қызылорда қаласы,<br>
+                        Амангельды Иманова көшесі, 95А
+                    </p>
+                </div>
+
+                <div class="pt-4">
+                    <a href="https://2gis.kz/kyzylorda" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-darkText text-ivory hover:bg-darkGold px-8 py-4 rounded-full text-sm font-medium tracking-wider uppercase transition-all duration-300 shadow-md hover:shadow-xl">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <span>Картадан көру</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. COUNTDOWN TIMER SECTION -->
+    <section class="py-20 px-4 bg-champagne/20">
+        <div class="max-w-4xl mx-auto text-center space-y-12">
+            <div class="space-y-3">
+                <span class="text-xs tracking-[0.3em] uppercase text-darkGold font-semibold">Қуанышты сәтке қалу</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-darkText">
+                    Мерейтойға дейін
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-3xl mx-auto">
+                <!-- Days -->
+                <div class="bg-white border gold-border p-6 rounded-2xl card-shadow flex flex-col items-center justify-center">
+                    <span id="days" class="font-serif text-4xl sm:text-6xl font-bold text-darkText">00</span>
+                    <span class="text-xs uppercase tracking-widest text-warmGray mt-2 font-medium">Күн</span>
+                </div>
+                <!-- Hours -->
+                <div class="bg-white border gold-border p-6 rounded-2xl card-shadow flex flex-col items-center justify-center">
+                    <span id="hours" class="font-serif text-4xl sm:text-6xl font-bold text-darkText">00</span>
+                    <span class="text-xs uppercase tracking-widest text-warmGray mt-2 font-medium">Сағат</span>
+                </div>
+                <!-- Minutes -->
+                <div class="bg-white border gold-border p-6 rounded-2xl card-shadow flex flex-col items-center justify-center">
+                    <span id="minutes" class="font-serif text-4xl sm:text-6xl font-bold text-darkText">00</span>
+                    <span class="text-xs uppercase tracking-widest text-warmGray mt-2 font-medium">Минут</span>
+                </div>
+                <!-- Seconds -->
+                <div class="bg-white border gold-border p-6 rounded-2xl card-shadow flex flex-col items-center justify-center">
+                    <span id="seconds" class="font-serif text-4xl sm:text-6xl font-bold text-darkText">00</span>
+                    <span class="text-xs uppercase tracking-widest text-warmGray mt-2 font-medium">Секунд</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PHOTO GALLERY SECTION -->
+    <section class="py-24 px-4 bg-ivory">
+        <div class="max-w-6xl mx-auto space-y-12 text-center">
+            <div class="space-y-3">
+                <span class="text-xs tracking-[0.3em] uppercase text-darkGold font-semibold">Жылы естеліктер</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-darkText">
+                    Райхан Анамызға арналған естеліктер
+                </h2>
+                <p class="text-warmGray max-w-xl mx-auto text-sm sm:text-base font-light">
+                    Өмірдің әрбір сәті – бір бақыт, әрбір естелік – бір тарих.
+                </p>
+            </div>
+
+            <!-- Gallery Grid with placeholders -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pt-4">
+                <!-- Gallery Item 1 -->
+                <div class="group bg-white p-3 rounded-2xl card-shadow border gold-border overflow-hidden transition-all duration-500 hover:-translate-y-2">
+                    <div class="relative overflow-hidden rounded-xl aspect-[4/5] bg-cream">
+                        <img src="C:\Users\zhans\OneDrive\Документы\WhatsApp Image 2026-09-25 at 11.53.44.jpeg" alt="Райхан Анамыз" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/600x750/E3D5C8/7E7672?text=Райхан+Ана'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkText/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <p class="text-white font-serif text-lg italic">Асыл анамыз</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="group bg-white p-3 rounded-2xl card-shadow border gold-border overflow-hidden transition-all duration-500 hover:-translate-y-2">
+                    <div class="relative overflow-hidden rounded-xl aspect-[4/5] bg-cream">
+                        <img src="C:\Users\zhans\OneDrive\Документы\WhatsApp Image 2026-09-25 at 11.54.27.jpeg" alt="Мерейтой сәті" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/600x750/D9C5B2/7E7672?text=Мерейтой'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkText/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <p class="text-white font-serif text-lg italic">Өнегелі өмір</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="group bg-white p-3 rounded-2xl card-shadow border gold-border overflow-hidden transition-all duration-500 hover:-translate-y-2 sm:col-span-2 lg:col-span-1">
+                    <div class="relative overflow-hidden rounded-xl aspect-[4/5] bg-cream">
+                        <img src="C:\Users\zhans\OneDrive\Документы\WhatsApp Image 2026-09-25 at 11.57.14.jpeg" alt="Отбасы қуанышы" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/600x750/F4EFEB/7E7672?text=Отбасы'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkText/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <p class="text-white font-serif text-lg italic">Бақытты шақтар</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. RSVP SECTION -->
+    <section class="py-24 px-4 bg-white relative overflow-hidden">
+        <div class="max-w-3xl mx-auto text-center space-y-10 bg-ivory border gold-border p-8 sm:p-14 rounded-3xl card-shadow">
+            <div class="space-y-4">
+                <span class="text-xs tracking-[0.3em] uppercase text-darkGold font-semibold">Жауап күтеміз</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-darkText">
+                    Сіздің қатысуыңыз біз үшін өте маңызды!
+                </h2>
+                <p class="text-warmGray text-sm sm:text-base font-light max-w-lg mx-auto">
+                    Той дастарханында қадірлі қонақ болуыңызды растауыңызды сұраймыз.
+                </p>
+            </div>
+
+            <!-- Guest Name Input (Optional for convenience) -->
+            <div class="max-w-md mx-auto">
+                <input type="text" id="guestName" placeholder="Аты-жөніңізді жазыңыз" class="w-full px-6 py-4 rounded-full bg-white border gold-border text-darkText placeholder-warmGray/60 focus:outline-none focus:ring-2 focus:ring-darkGold text-center text-sm sm:text-base shadow-sm">
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                <button onclick="handleRSVP('КЕЛЕДІ')" class="w-full sm:w-auto min-w-[220px] bg-darkText hover:bg-darkGold text-ivory px-8 py-4 rounded-full text-sm font-semibold tracking-wider uppercase transition-all duration-300 shadow-md hover:shadow-xl flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Қатысамын</span>
+                </button>
+                <button onclick="handleRSVP('КЕЛЕ АЛМАЙДЫ')" class="w-full sm:w-auto min-w-[220px] bg-cream hover:bg-champagne text-darkText border gold-border px-8 py-4 rounded-full text-sm font-semibold tracking-wider uppercase transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>Өкінішке орай, келе алмаймын</span>
+                </button>
+            </div>
+
+            <!-- RSVP Notification Message Box -->
+            <div id="rsvpMessage" class="hidden mt-4 p-4 rounded-2xl bg-champagne/30 text-darkText text-sm font-medium animate-[fadeIn_0.5s_ease-out]"></div>
+        </div>
+    </section>
+
+    <!-- 8. CLOSING SECTION -->
+    <footer class="py-20 px-4 bg-ivory text-center relative overflow-hidden border-t gold-border">
+        <div class="max-w-3xl mx-auto space-y-6 relative z-10">
+            <div class="w-12 h-12 rounded-full bg-champagne/40 mx-auto flex items-center justify-center text-darkGold text-xl">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <h2 class="font-serif text-3xl sm:text-5xl font-medium text-darkText">
+                Сіздерді асыға күтеміз!
+            </h2>
+
+            <div class="h-[1px] w-20 bg-gold/50 mx-auto"></div>
+
+            <div class="space-y-2 pt-2">
+                <p class="text-sm sm:text-base uppercase tracking-widest text-warmGray font-medium">Ізгі ниетпен,</p>
+                <p class="font-serif italic text-2xl sm:text-3xl text-darkGold font-semibold">Райхан Анамыздың Балалары</p>
+            </div>
+
+            <div class="pt-6">
+                <span class="text-xs sm:text-sm tracking-[0.3em] uppercase text-warmGray font-medium">
+                    07.10.2026
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // 1. COUNTDOWN TIMER LOGIC
+        const targetDate = new Date("October 7, 2026 18:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // 2. BACKGROUND MUSIC TOGGLE LOGIC
+        const bgMusic = document.getElementById("bgMusic");
+        const musicToggleBtn = document.getElementById("musicToggleBtn");
+        const musicIcon = document.getElementById("musicIcon");
+        const musicText = document.getElementById("musicText");
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicIcon.className = "fa-solid fa-music";
+                musicText.innerText = "Музыканы қосу";
+                musicToggleBtn.classList.remove("bg-darkGold", "text-white");
+                musicToggleBtn.classList.add("bg-white/90", "text-darkGold");
+                isPlaying = false;
+            } else {
+                bgMusic.play().then(() => {
+                    musicIcon.className = "fa-solid fa-pause";
+                    musicText.innerText = "Музыканы өшіру";
+                    musicToggleBtn.classList.remove("bg-white/90", "text-darkGold");
+                    musicToggleBtn.classList.add("bg-darkGold", "text-white");
+                    isPlaying = true;
+                }).catch(error => {
+                    console.log("Audio play error:", error);
+                });
+            }
+        }
+
+        // 3. RSVP FORM LOGIC
+        function handleRSVP(status) {
+            const guestNameInput = document.getElementById("guestName");
+            const rsvpMessage = document.getElementById("rsvpMessage");
+            const name = guestNameInput.value.trim();
+
+            rsvpMessage.classList.remove("hidden");
+            if (status === 'КЕЛЕДІ') {
+                rsvpMessage.innerHTML = name ? 
+                    `Құрметті <strong>${name}</strong>, жауабыңыз қабылданды! Тойдан көріскенше асыға күтеміз!` : 
+                    `Жауабыңыз қабылданды! Қатысатыныңызға рақмет!`;
+                rsvpMessage.className = "mt-4 p-4 rounded-2xl bg-emerald-50 text-emerald-800 border border-emerald-200 text-sm font-medium animate-[fadeIn_0.5s_ease-out]";
+            } else {
+                rsvpMessage.innerHTML = name ? 
+                    `Құрметті <strong>${name}</strong>, ескертуіңізге рақмет. Келе алмасаңыз да ізгі тілегіңіз үшін алғыс айтамыз!` : 
+                    `Жауабыңыз қабылданды. Түсіністікпен қараймыз!`;
+                rsvpMessage.className = "mt-4 p-4 rounded-2xl bg-amber-50 text-amber-800 border border-amber-200 text-sm font-medium animate-[fadeIn_0.5s_ease-out]";
+            }
+        }
+    </script>
+</body>
+</html>
